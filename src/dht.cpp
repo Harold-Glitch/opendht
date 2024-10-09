@@ -2531,6 +2531,7 @@ Dht::onAnnounce(Sp<Node> n,
         } else {
             // Allow the value to be edited by the storage policy
             const auto& type = getType(vc->type);
+           
             if (type.storePolicy(hash, vc, node.id, node.getAddr())) {
                 // if (logger_)
                 //     logger_->d(hash, node.id, "[store %s] storing %s", hash.toString().c_str(), std::to_string(vc->id).c_str());
